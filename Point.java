@@ -13,4 +13,10 @@ public class Point
    {
       return "(" + x + "," + y + ")";
    }
+
+   public boolean equals(Object obj)
+   {
+      Point pt  = (Point)obj;
+      return (this.x == pt.x && this.y==pt.y);
+   }
 }

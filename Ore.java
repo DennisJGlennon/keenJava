@@ -5,7 +5,7 @@ import java.util.Random;
 public class Ore
    extends Actor
 {
-   private static final int DEFAULT_RATE = 5000;
+   private static final int DEFAULT_RATE = 1000;//5000;
    private static final int BLOB_RATE_SCALE = 4;
    private static final int BLOB_ANIMATION_RATE_SCALE = 50;
    private static final int BLOB_ANIMATION_MIN = 1;

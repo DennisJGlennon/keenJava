@@ -3,7 +3,7 @@ import java.util.LinkedList;
 
 public class OrderedList<T>
 {
-   private List<ListItem<T>> list;
+   public List<ListItem<T>> list;
 
    public OrderedList()
    {
@@ -79,4 +79,18 @@ public class OrderedList<T>
          this.ord = ord;
       }
    }
+
+   public boolean contains(T check)
+   {
+      for(int i=0;i<list.size();i++)
+      {
+         if(check.equals(list.get(i).item))
+         {
+            return true;
+         }
+      }
+      return false;
+   }
+
+
 }
