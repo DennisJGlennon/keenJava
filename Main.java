@@ -77,7 +77,8 @@ public class Main extends PApplet
 
    public void draw_overlay()
    {
-      Point pt = new Point(mouseX / TILE_WIDTH, mouseY / TILE_HEIGHT);
+	  Point pt = new Point(mouseX / TILE_WIDTH + view.getViewport().getCol(), 
+                           mouseY / TILE_HEIGHT + view.getViewport().getRow());
       WorldEntity occ = world.getTileOccupant(pt);
       if (occ instanceof MobileAnimatedActor)
       {
@@ -92,8 +93,9 @@ public class Main extends PApplet
       fill(0,0,0,150);
       for(Point p : pts)
       {
-         rect(p.x * TILE_WIDTH, p.y * TILE_HEIGHT, TILE_WIDTH,
-                 TILE_HEIGHT);
+		  rect((p.x - view.getViewport().getCol()) * TILE_WIDTH, 
+			   (p.y - view.getViewport().getRow()) * TILE_HEIGHT, 
+              TILE_WIDTH, TILE_HEIGHT);
       }
    }
 
@@ -105,9 +107,11 @@ public class Main extends PApplet
       int h = TILE_HEIGHT / 4;
       for(Point p : pts)
       {
-         rect(p.x * TILE_WIDTH + TILE_WIDTH / 2 - w / 2,
-                 p.y * TILE_HEIGHT + TILE_HEIGHT / 2 - h / 2,
-                 w, h);
+		 rect((p.x - view.getViewport().getCol()) * TILE_WIDTH + 
+                 TILE_WIDTH / 2 - w / 2,
+			  (p.y - view.getViewport().getRow()) * TILE_HEIGHT + 
+                 TILE_HEIGHT / 2 - h / 2,
+              w, h);
       }
    }
 
