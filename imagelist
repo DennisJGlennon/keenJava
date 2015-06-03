@@ -1,4 +1,15 @@
 blacksmith images/blacksmith.bmp
+lava images/lava1.png 255 255 255 0
+lava images/lava2.png 255 255 255 0
+lava images/lava3.png 255 255 255 0
+lava images/lava4.png 255 255 255 0
+lava images/lava5.png 255 255 255 0
+lava images/lava6.png 255 255 255 0
+lava images/lava7.png 255 255 255 0
+lava images/lava8.png 255 255 255 0
+lava images/lava9.png 255 255 255 0
+lava images/lava10.png 255 255 255 0
+lava images/lava11.png 255 255 255 0
 blob images/blob1.bmp 255 255 255 0
 blob images/blob2.bmp 255 255 255 0
 blob images/blob3.bmp 255 255 255 0
