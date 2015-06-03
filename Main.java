@@ -140,6 +140,27 @@ public class Main extends PApplet
       }
    }
 
+	public void mousePressed()
+	{
+        for (int i = 0; i < 4; i++)
+		{
+            for (int o = 0; o < 4; o++)
+			{
+                int x = mouseX/TILE_WIDTH + view.getViewport().getCol() + o;
+                int y = mouseY/TILE_HEIGHT + view.getViewport().getRow() + i;
+                Point pt = new Point(x, y);
+                if (world.withinBounds(pt))
+				{
+                    Lava lava = new Lava("lava1", pt, 300, 400, 
+                             imageStore.get("lava"));
+		        lava.schedule(world, System.currentTimeMillis() 
+                    + lava.getRate(), imageStore);
+                world.addEntity(lava);
+				}
+			}
+		}
+	}
+
    private static Background createDefaultBackground(ImageStore imageStore)
    {
       List<PImage> bgndImgs = imageStore.get(DEFAULT_IMAGE_NAME);
