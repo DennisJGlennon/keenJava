@@ -14,8 +14,8 @@ public class Main extends PApplet
 
    private static final int SCREEN_WIDTH = 640;
    private static final int SCREEN_HEIGHT = 480;
-   private static final int TILE_WIDTH = 32;
-   private static final int TILE_HEIGHT = 32;
+   public static final int TILE_WIDTH = 32;
+   public static final int TILE_HEIGHT = 32;
 
    private static final int TIMER_ACTION_DELAY = 100;
 
@@ -167,7 +167,7 @@ public class Main extends PApplet
       return new Background(DEFAULT_IMAGE_NAME, bgndImgs);
    }
 
-   private static PImage createImageColored(int width, int height, int color)
+   public static PImage createImageColored(int width, int height, int color)
    {
       PImage img = new PImage(TILE_WIDTH, TILE_HEIGHT, RGB);
       img.loadPixels();
@@ -180,7 +180,7 @@ public class Main extends PApplet
    }
 
 
-   private static void loadImages(String filename, ImageStore imageStore,
+   public static void loadImages(String filename, ImageStore imageStore,
                                   PApplet screen)
    {
       try
