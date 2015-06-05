@@ -1,0 +1,15 @@
+Description of David Ritter and Dennis Glennon's World Event
+
+1) Trigger the event by clicking the mouse on a tile. 
+
+2) The event is creating a 4x4 Lava array around the clicked tile 
+(upper left middle corner of 4x4). The lava periodically spawns a "lava monster"
+and transforms adjacent blobs to "fire blobs."
+
+3) Any blob that comes close to the lava will turn into a "lava blob" 
+that now seeks out a blacksmith to remove it from the world.
+
+4) The new entity, "lava monster," spawns around the lava and seeks out miners. 
+When the lava monster is within one square of the miner and the miner doesn't move for
+one lava monster movement rate, the miner turns into a lava square (i.e. the miner "dies" 
+and turns into lava).

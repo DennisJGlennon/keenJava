@@ -1,21 +1,23 @@
 import processing.core.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
-import java.util.Scanner;
+
+import java.util.*;
 import java.io.FileNotFoundException;
 import java.io.File;
 
 public class Main extends PApplet
 {
+   public static final int LAVA_RATE_MIN = 5000;
+   public static final int LAVA_RATE_MAX = 10000;
+
+   private static final Random rand = new Random();
+
    private static final int WORLD_WIDTH_SCALE = 2;
    private static final int WORLD_HEIGHT_SCALE = 2;
 
    private static final int SCREEN_WIDTH = 640;
    private static final int SCREEN_HEIGHT = 480;
-   public static final int TILE_WIDTH = 32;
-   public static final int TILE_HEIGHT = 32;
+   private static final int TILE_WIDTH = 32;
+   private static final int TILE_HEIGHT = 32;
 
    private static final int TIMER_ACTION_DELAY = 100;
 
@@ -72,7 +74,7 @@ public class Main extends PApplet
       }
 
       view.drawViewport();
-      draw_overlay();
+      //draw_overlay();
    }
 
    public void draw_overlay()
@@ -142,17 +144,25 @@ public class Main extends PApplet
 
 	public void mousePressed()
 	{
-        for (int i = 0; i < 4; i++)
+        for (int i = -1; i < 3; i++)
 		{
-            for (int o = 0; o < 4; o++)
+            for (int o = -1; o < 3; o++)
 			{
                 int x = mouseX/TILE_WIDTH + view.getViewport().getCol() + o;
                 int y = mouseY/TILE_HEIGHT + view.getViewport().getRow() + i;
                 Point pt = new Point(x, y);
                 if (world.withinBounds(pt))
 				{
-                    Lava lava = new Lava("lava1", pt, 300, 400, 
-                             imageStore.get("lava"));
+                   Lava lava;
+                   if(rand.nextBoolean()) {
+                      lava = new Lava("lava1", pt, 999999999, 400,
+                              imageStore.get("lava")); //never spawn
+                   }
+                   else
+                   {
+                      lava = new Lava("lava1", pt, LAVA_RATE_MIN + rand.nextInt(LAVA_RATE_MAX - LAVA_RATE_MIN), 400,
+                              imageStore.get("lava"));
+                   }
 		        lava.schedule(world, System.currentTimeMillis() 
                     + lava.getRate(), imageStore);
                 world.addEntity(lava);
@@ -167,7 +177,7 @@ public class Main extends PApplet
       return new Background(DEFAULT_IMAGE_NAME, bgndImgs);
    }
 
-   public static PImage createImageColored(int width, int height, int color)
+   private static PImage createImageColored(int width, int height, int color)
    {
       PImage img = new PImage(TILE_WIDTH, TILE_HEIGHT, RGB);
       img.loadPixels();
@@ -180,7 +190,7 @@ public class Main extends PApplet
    }
 
 
-   public static void loadImages(String filename, ImageStore imageStore,
+   private static void loadImages(String filename, ImageStore imageStore,
                                   PApplet screen)
    {
       try

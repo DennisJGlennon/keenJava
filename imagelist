@@ -1,4 +1,9 @@
 blacksmith images/blacksmith.bmp
+fire images/fire1.bmp 255 255 255 0
+fire images/fire2.bmp 255 255 255 0
+fire images/fire3.bmp 255 255 255 0
+fire images/fire4.bmp 255 255 255 0
+fire images/fire5.bmp 255 255 255 0
 lava images/lava1.png 255 255 255 0
 lava images/lava2.png 255 255 255 0
 lava images/lava3.png 255 255 255 0
@@ -10,30 +15,18 @@ lava images/lava8.png 255 255 255 0
 lava images/lava9.png 255 255 255 0
 lava images/lava10.png 255 255 255 0
 lava images/lava11.png 255 255 255 0
-lavablob images/lavablob1.bmp 255 255 255 0
-lavablob images/lavablob2.bmp 255 255 255 0
-lavablob images/lavablob3.bmp 255 255 255 0
-lavablob images/lavablob4.bmp 255 255 255 0
-lavablob images/lavablob5.bmp 255 255 255 0
-lavablob images/lavablob6.bmp 255 255 255 0
-lavablob images/lavablob7.bmp 255 255 255 0
-lavablob images/lavablob8.bmp 255 255 255 0
-lavablob images/lavablob9.bmp 255 255 255 0
-lavablob images/lavablob10.bmp 255 255 255 0
-lavablob images/lavablob11.bmp 255 255 255 0
-lavablob images/lavablob12.bmp 255 255 255 0
-oreblob images/blob1.bmp 255 255 255 0
-oreblob images/blob2.bmp 255 255 255 0
-oreblob images/blob3.bmp 255 255 255 0
-oreblob images/blob4.bmp 255 255 255 0
-oreblob images/blob5.bmp 255 255 255 0
-oreblob images/blob6.bmp 255 255 255 0
-oreblob images/blob7.bmp 255 255 255 0
-oreblob images/blob8.bmp 255 255 255 0
-oreblob images/blob9.bmp 255 255 255 0
-oreblob images/blob10.bmp 255 255 255 0
-oreblob images/blob11.bmp 255 255 255 0
-oreblob images/blob12.bmp 255 255 255 0
+blob images/blob1.bmp 255 255 255 0
+blob images/blob2.bmp 255 255 255 0
+blob images/blob3.bmp 255 255 255 0
+blob images/blob4.bmp 255 255 255 0
+blob images/blob5.bmp 255 255 255 0
+blob images/blob6.bmp 255 255 255 0
+blob images/blob7.bmp 255 255 255 0
+blob images/blob8.bmp 255 255 255 0
+blob images/blob9.bmp 255 255 255 0
+blob images/blob10.bmp 255 255 255 0
+blob images/blob11.bmp 255 255 255 0
+blob images/blob12.bmp 255 255 255 0
 grass images/grass.bmp
 miner images/miner1.bmp 252 252 252 0
 miner images/miner2.bmp 252 252 252 0
@@ -50,4 +43,16 @@ quake images/quake5.bmp 255 255 255 0
 quake images/quake6.bmp 255 255 255 0
 rocks images/rock.bmp
 vein images/vein.bmp
+lavablob images/lavablob1.bmp 255 255 255 0
+lavablob images/lavablob2.bmp 255 255 255 0
+lavablob images/lavablob3.bmp 255 255 255 0
+lavablob images/lavablob4.bmp 255 255 255 0
+lavablob images/lavablob5.bmp 255 255 255 0
+lavablob images/lavablob6.bmp 255 255 255 0
+lavablob images/lavablob7.bmp 255 255 255 0
+lavablob images/lavablob8.bmp 255 255 255 0
+lavablob images/lavablob9.bmp 255 255 255 0
+lavablob images/lavablob10.bmp 255 255 255 0
+lavablob images/lavablob11.bmp 255 255 255 0
+lavablob images/lavablob12.bmp 255 255 255 0
 background_default images/none.bmp

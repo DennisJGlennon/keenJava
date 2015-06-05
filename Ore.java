@@ -34,7 +34,7 @@ public class Ore
       Action[] action = { null };
       action[0] = ticks -> {
          removePendingAction(action[0]);
-         OreBlob blob = createBlob(world, getName() + " -- oreblob",
+         OreBlob blob = createBlob(world, getName() + " -- blob",
             getPosition(), getRate() / BLOB_RATE_SCALE, ticks, imageStore);
 
          remove(world);
@@ -49,7 +49,7 @@ public class Ore
       OreBlob blob = new OreBlob(name, pt, rate,
          BLOB_ANIMATION_RATE_SCALE * (BLOB_ANIMATION_MIN +
             rand.nextInt(BLOB_ANIMATION_MAX - BLOB_ANIMATION_MIN)),
-         imageStore.get("oreblob"));
+         imageStore.get("blob"));
       blob.schedule(world, ticks, imageStore);
       return blob;
    }
